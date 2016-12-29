@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="github.css">
+    <script src="highlight.pack.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <style>
+      .form-container {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+      }
+
+      .inline-form-container {
+        padding: 25px;
+      }
+
+      .left-border {
+        border-left: 1px solid;
+      }
+
+      .top-border {
+        border-top: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Basic form</h1>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="form-container">
+            <form>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input">
+                  I agree
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-sm-6 left-border">
+          <pre>
+            <code>
+&lt;form&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="email"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" <b>class="form-control"</b> id="email"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label for="password"&gt;Password&lt;/label&gt;
+    &lt;input type="password" class="form-control" id="password"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-check"&gt;
+    &lt;label class="form-check-label"&gt;
+      &lt;input type="checkbox" class="form-check-input"&gt;
+      I agree
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+            </code>
+          </pre>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Inline form</h1>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="inline-form-container">
+          <form class="form-inline">
+            <div class="form-group">
+              <label for="name2">Name</label>
+              <input type="text" class="form-control" id="name2" placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+              <label for="email2">Email</label>
+              <input type="email" class="form-control" id="email2" placeholder="jane.doe@example.com">
+            </div>
+            <button type="submit" class="btn btn-primary">Send invitation</button>
+          </form>
+        </div>
+        <p>This works only on one row. Best suitable for for sign-in forms etc. </p>
+      </div>
+
+      <div class="col-sm-12 top-border">
+        <pre>
+          <code>
+&lt;form class="form-inline"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="name2"&gt;Name&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="name2" placeholder="Jane Doe"&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="email2"&gt;Email&lt;/label&gt;
+    &lt;input type="email" class="form-control" id="email2" placeholder="jane.doe@example.com"&gt;
+  &lt;/div&gt;
+  &lt;button type="submit" class="btn btn-primary"&gt;Send invitation&lt;/button&gt;
+&lt;/form&gt;
+          </code>
+        </pre>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Inline labels</h1>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-container">
+        <form>
+          <div class="form-group row">
+            <label for="email3" class="col-xs-3 col-form-label">Email</label>
+            <div class="col-xs-9">
+              <input type="email" class="form-control" id="email3">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="password3" class="col-xs-3 col-form-label">Password</label>
+            <div class="col-xs-9">
+              <input type="email" class="form-control" id="password3">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <p>This uses Bootstrap's grid for sizeing the labels and inputs. Notice the <code>form-group row</code> and <code>col-xs-x</code> classes</p>
+    </div>
+
+    <div class="col-sm-6 left-border">
+      <pre>
+&lt;form&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="emailInput"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" class="form-control" id="emailInput"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label for="passwordInput"&gt;Password&lt;/label&gt;
+    &lt;input type="password" class="form-control" id="passwordInput"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-check"&gt;
+    &lt;label class="form-check-label"&gt;
+      &lt;input type="checkbox" class="form-check-input"&gt;
+      I agree
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+          </pre>
+  </div>
+</div>
+    </div>
+  </body>
+</html>
