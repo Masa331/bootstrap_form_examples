@@ -1,0 +1,14 @@
+.form-container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.left-border {
+  border-left: 1px solid;
+}
+
+.notes {
+  margin-top: 40px;
+}

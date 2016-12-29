@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="github.css">
+
+    <script src="highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Basic form</h1>
+        </div>
+
+        <div class="col-sm-6">
+          <form>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+          <div class="notes">
+            <b>Notes</b>
+            <p>
+              The important things here are the <code>form-group</code> div wrappers around label and input and <code>form-control</code> class on input itself. Other than that there is nothing special.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 left-border">
+          <pre>
+            <code>
+&lt;form&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="email"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" <b>class="form-control"</b> id="email"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label for="password"&gt;Password&lt;/label&gt;
+    &lt;input type="password" class="form-control" id="password"&gt;
+  &lt;/div&gt;
+
+  &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Checkboxes, radios</h1>
+        </div>
+
+        <div class="col-sm-6">
+          <form>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" name="cat" type="checkbox" value="">
+                I have a cat
+              </label>
+            </div>
+
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="radios" value="option1" checked>
+                I have a dog
+              </label>
+            </div>
+
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="radios" value="option2">
+                I don't have a dog
+              </label>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-sm-6 left-border">
+          <pre>
+            <code>
+&lt;form&gt;
+  &lt;div class="form-check"&gt;
+    &lt;label class="form-check-label"&gt;
+      &lt;input class="form-check-input" name="cat" type="checkbox" value=""&gt;
+      I have a cat
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-check"&gt;
+    &lt;label class="form-check-label"&gt;
+      &lt;input class="form-check-input" type="radio" name="radios" value="option1" checked&gt;
+      I have a dog
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-check"&gt;
+    &lt;label class="form-check-label"&gt;
+      &lt;input class="form-check-input" type="radio" name="radios" value="option2"&gt;
+      I don't have a dog
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Disabled fields</h1>
+        </div>
+
+        <div class="col-sm-6">
+          <form>
+            <div class="form-group">
+              <label for="email2">Email address</label>
+              <input type="email" class="form-control" id="email2" disabled>
+            </div>
+
+            <div class="form-check disabled">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" disabled>
+                I have a cat
+              </label>
+            </div>
+
+            <div class="form-check disabled">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="radios" value="option1" checked disabled>
+                I have a dog
+              </label>
+            </div>
+
+            <div class="form-check disabled">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="radios" value="option2" disabled>
+                I don't have a dog
+              </label>
+            </div>
+          </form>
+
+          <div class="notes">
+            <b>Notes</b>
+            <p>
+              To display not-allowed cursor on hover over checkbox or radio label it's necessary to add <code>disabled</code> class to label and input wrapper.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 left-border">
+          <pre>
+            <code>
+&lt;form&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="email2"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" class="form-control" id="email2" disabled&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-check disabled"&gt;
+    &lt;label class="form-check-label"&gt;
+      &lt;input class="form-check-input" type="checkbox" value="" disabled&gt;
+      I have a cat
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-check disabled"&gt;
+    &lt;label class="form-check-label"&gt;
+      &lt;input class="form-check-input" type="radio" name="radios" value="option1" checked disabled&gt;
+      I have a dog
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-check disabled"&gt;
+    &lt;label class="form-check-label"&gt;
+      &lt;input class="form-check-input" type="radio" name="radios" value="option2" disabled&gt;
+      I don't have a dog
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Addons</h1>
+        </div>
+
+        <div class="col-sm-6">
+          <form>
+            <div class="form-group">
+              <label for="email3">Email address</label>
+              <div class="input-group">
+                <div class="input-group-addon">@</div>
+                <input id="email3" class="form-control" type="text">
+                <div class="input-group-addon">Thanks</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="amount">Amount</label>
+              <div class="input-group">
+                <div class="input-group-addon">$</div>
+                <div class="input-group-addon">0.00</div>
+                <input id="amount" class="form-control" type="text">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="input1">Some input</label>
+
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="checkbox">
+                </span>
+
+                <input type="text" id="input1" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="search">Search</label>
+
+              <div class="input-group">
+                <input type="text" id="search" class="form-control">
+
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button">Go!</button>
+                </span>
+              </div>
+            </div>
+          </form>
+
+          <div class="notes">
+            <b>Notes</b>
+            <p>
+              It's also possible to have a menu as an addon or radio button. For more info check the official docs.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 left-border">
+          <pre>
+            <code>
+&lt;form&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="email3"&gt;Email address&lt;/label&gt;
+    &lt;div class="input-group"&gt;
+      &lt;div class="input-group-addon"&gt;@&lt;/div&gt;
+      &lt;input id="email3" class="form-control" type="text"&gt;
+      &lt;div class="input-group-addon"&gt;Thanks&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label for="amount"&gt;Amount&lt;/label&gt;
+    &lt;div class="input-group"&gt;
+      &lt;div class="input-group-addon"&gt;$&lt;/div&gt;
+      &lt;div class="input-group-addon"&gt;0.00&lt;/div&gt;
+      &lt;input id="amount" class="form-control" type="text"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label for="input1"&gt;Some input&lt;/label&gt;
+
+    &lt;div class="input-group"&gt;
+      &lt;span class="input-group-addon"&gt;
+        &lt;input type="checkbox"&gt;
+      &lt;/span&gt;
+
+      &lt;input type="text" id="input1" class="form-control"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label for="search"&gt;Search&lt;/label&gt;
+
+    &lt;div class="input-group"&gt;
+      &lt;input type="text" id="search" class="form-control"&gt;
+
+      &lt;span class="input-group-btn"&gt;
+        &lt;button class="btn btn-secondary" type="button"&gt;Go!&lt;/button&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Help text</h1>
+        </div>
+
+        <div class="col-sm-6">
+          <form>
+            <label for="password2">Password</label>
+            <input type="password" id="password2" class="form-control">
+            <p class="form-text">
+              Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+            </p>
+          </form>
+        </div>
+
+        <div class="col-sm-6 left-border">
+          <pre>
+            <code>
+&lt;form&gt;
+  &lt;label for="password2"&gt;Password&lt;/label&gt;
+  &lt;input type="password" id="password2" class="form-control"&gt;
+  &lt;p class="form-text"&gt;
+    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+  &lt;/p&gt;
+&lt;/form&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Fields size</h1>
+        </div>
+
+        <div class="col-sm-6">
+          <form>
+            <div class="form-group">
+              <label for="password3">Password</label>
+              <input id="password3" class="form-control form-control-lg" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="email4">Email address</label>
+              <div class="input-group input-group-lg">
+                <div class="input-group-addon">@</div>
+                <input id="email4" class="form-control" type="text">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+          </form>
+
+          <div class="notes">
+            <b>Notes</b>
+            <p>
+              Important here is to use <code>input-group-lg</code> on <code>input-group</code> div wrappers. Otherwise the addons will have wrong size.
+            </p>
+
+            <p>Available size classes are <code>-sm</code> for small and <code>-lg</code> for large.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 left-border">
+          <pre>
+            <code>
+&lt;form&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="password3"&gt;Password&lt;/label&gt;
+    &lt;input id="password3" class="form-control form-control-lg" type="text"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label for="email4"&gt;Email address&lt;/label&gt;
+    &lt;div class="input-group input-group-lg"&gt;
+      &lt;div class="input-group-addon"&gt;@&lt;/div&gt;
+      &lt;input id="email4" class="form-control" type="text"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;button type="submit" class="btn btn-lg btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Inline labels and elements</h1>
+        </div>
+
+        <div class="col-sm-6">
+          <form>
+            <div class="form-group row">
+              <label for="email5" class="col-xs-3 col-form-label">Email</label>
+              <div class="col-xs-9">
+                <input type="email" class="form-control" id="email5">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="password5" class="col-xs-3 col-form-label">Password</label>
+              <div class="col-xs-9">
+                <input type="email" class="form-control" id="password5">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 1
+              </label>
+              <label class="form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 2
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option1"> 1
+              </label>
+              <label class="form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option2"> 2
+              </label>
+            </div>
+          </form>
+
+          <div class="notes">
+            <b>Notes</b>
+            <p>
+              This uses Bootstrap's grid for sizing the labels and inputs. Notice the <code>form-group row</code> and <code>col-xs-x</code> classes
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 left-border">
+          <pre>
+            <code>
+&lt;form&gt;
+  &lt;div class="form-group row"&gt;
+    &lt;label for="email5" class="col-xs-3 col-form-label"&gt;Email&lt;/label&gt;
+    &lt;div class="col-xs-9"&gt;
+      &lt;input type="email" class="form-control" id="email5"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group row"&gt;
+    &lt;label for="password5" class="col-xs-3 col-form-label"&gt;Password&lt;/label&gt;
+    &lt;div class="col-xs-9"&gt;
+      &lt;input type="email" class="form-control" id="password5"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label class="form-check-inline"&gt;
+      &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"&gt; 1
+    &lt;/label&gt;
+    &lt;label class="form-check-inline"&gt;
+        &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"&gt; 2
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label class="form-check-inline"&gt;
+      &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" value="option1"&gt; 1
+    &lt;/label&gt;
+    &lt;label class="form-check-inline"&gt;
+      &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" value="option2"&gt; 2
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <!-- <div class="row"> -->
+      <!--   <div class="col&#45;sm&#45;12"> -->
+      <!--     <h1>Form grid layout</h1> -->
+      <!--   </div> -->
+      <!--  -->
+      <!--   <div class="col&#45;sm&#45;6"> -->
+      <!--     <div class="form&#45;container"> -->
+      <!--       <form> -->
+      <!--         <div class="form&#45;group"> -->
+      <!--           <label for="email3">Name</label> -->
+      <!--           <input type="text" class="form&#45;control" id="email3"> -->
+      <!--         </div> -->
+      <!--  -->
+      <!--         <div class="row"> -->
+      <!--           <div class="form&#45;group col&#45;xs&#45;8"> -->
+      <!--             <label for="email3" class="col&#45;form&#45;label">Job title</label> -->
+      <!--             <input type="text" class="form&#45;control" id="email3"> -->
+      <!--           </div> -->
+      <!--  -->
+      <!--           <div class="form&#45;group col&#45;xs&#45;4"> -->
+      <!--             <label for="email3" class="col&#45;form&#45;label">Salary</label> -->
+      <!--             <input type="text" class="form&#45;control" id="email3"> -->
+      <!--           </div> -->
+      <!--         </div> -->
+      <!--  -->
+      <!--         <div class="form&#45;group row"> -->
+      <!--           <div class="col&#45;xs&#45;6"> -->
+      <!--             <label for="email3" class="col&#45;form&#45;label">Email</label> -->
+      <!--             <input type="email" class="form&#45;control" id="email3"> -->
+      <!--           </div> -->
+      <!--  -->
+      <!--           <div class="col&#45;xs&#45;6"> -->
+      <!--             <label for="email3" class="col&#45;form&#45;label">Email</label> -->
+      <!--             <input type="email" class="form&#45;control" id="email3"> -->
+      <!--           </div> -->
+      <!--         </div> -->
+      <!--  -->
+      <!--         <button type="submit" class="btn btn&#45;primary">Submit</button> -->
+      <!--       </form> -->
+      <!--     </div> -->
+      <!--  -->
+      <!--     <p>This uses Bootstrap's grid for sizeing the labels and inputs. Notice the <code>form&#45;group row</code> and <code>col&#45;xs&#45;x</code> classes</p> -->
+      <!--   </div> -->
+      <!--  -->
+      <!--   <div class="col&#45;sm&#45;6 left&#45;border"> -->
+      <!--     <pre> -->
+      <!--       <code> -->
+      <!--  -->
+      <!--       </code> -->
+      <!--     </pre> -->
+      <!--   </div> -->
+      <!-- </div> -->
+    </div>
+  </body>
+</html>
