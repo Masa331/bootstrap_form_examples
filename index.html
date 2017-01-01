@@ -78,20 +78,30 @@
               </label>
             </div>
 
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="radios" value="option1" checked>
-                I have a dog
-              </label>
-            </div>
+            <fieldset class="form-group">
+              <legend>Label for radios</legend>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="radios" value="option1" checked>
+                  I have a dog
+                </label>
+              </div>
 
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="radios" value="option2">
-                I don't have a dog
-              </label>
-            </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="radios" value="option2">
+                  I don't have a dog
+                </label>
+              </div>
+            </fieldset>
           </form>
+
+          <div class="notes">
+            <b>Notes</b>
+            <p>
+              Special class needs to be used on labels - <code>form-check-label</code> and on inputs - <code>form-check-input</code>. Also radios are wrapped in <code>fieldset</code> tag and <code>legend</code> tag is used as a heading.
+            </p>
+          </div>
         </div>
 
         <div class="col-sm-6 left-border">
@@ -105,19 +115,22 @@
     &lt;/label&gt;
   &lt;/div&gt;
 
-  &lt;div class="form-check"&gt;
-    &lt;label class="form-check-label"&gt;
-      &lt;input class="form-check-input" type="radio" name="radios" value="option1" checked&gt;
-      I have a dog
-    &lt;/label&gt;
-  &lt;/div&gt;
+  &lt;fieldset class="form-group"&gt;
+    &lt;legend&gt;Label for radios&lt;/legend&gt;
+    &lt;div class="form-check"&gt;
+      &lt;label class="form-check-label"&gt;
+        &lt;input class="form-check-input" type="radio" name="radios" value="option1" checked&gt;
+        I have a dog
+      &lt;/label&gt;
+    &lt;/div&gt;
 
-  &lt;div class="form-check"&gt;
-    &lt;label class="form-check-label"&gt;
-      &lt;input class="form-check-input" type="radio" name="radios" value="option2"&gt;
-      I don't have a dog
-    &lt;/label&gt;
-  &lt;/div&gt;
+    &lt;div class="form-check"&gt;
+      &lt;label class="form-check-label"&gt;
+        &lt;input class="form-check-input" type="radio" name="radios" value="option2"&gt;
+        I don't have a dog
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
 &lt;/form&gt;
             </code>
           </pre>
@@ -317,23 +330,34 @@
 
         <div class="col-sm-6">
           <form>
-            <label for="password2">Password</label>
-            <input type="password" id="password2" class="form-control">
-            <p class="form-text">
-              Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-            </p>
+            <div class="form-group">
+              <label for="password2">Password</label>
+              <input type="password" id="password2" class="form-control">
+              <p class="form-text">
+                Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+              </p>
+            </div>
           </form>
+
+          <div class="notes">
+            <b>Notes</b>
+            <p>
+              <code>form-text</code> can be used also on <code>small</code> tag to make the text smaller. Another handy class to use with <code>form-text</code> is <code>text-muted</code> which makes the text gray.
+            </p>
+          </div>
         </div>
 
         <div class="col-sm-6 left-border">
           <pre>
             <code>
 &lt;form&gt;
-  &lt;label for="password2"&gt;Password&lt;/label&gt;
-  &lt;input type="password" id="password2" class="form-control"&gt;
-  &lt;p class="form-text"&gt;
-    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-  &lt;/p&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="password2"&gt;Password&lt;/label&gt;
+    &lt;input type="password" id="password2" class="form-control"&gt;
+    &lt;p class="form-text"&gt;
+      Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+    &lt;/p&gt;
+  &lt;/div&gt;
 &lt;/form&gt;
             </code>
           </pre>
@@ -399,7 +423,86 @@
 
       <div class="row">
         <div class="col-sm-12">
-          <h1>Inline labels and elements</h1>
+          <h1>Multiple fields on same row</h1>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="form-container">
+            <form>
+              <div class="form-group row">
+                <div class="col-lg-6">
+                  <label for="firstName">First Name</label>
+                  <input type="email" class="form-control" id="firstName">
+                </div>
+
+                <div class="col-lg-6">
+                  <label for="lastName">Last Name</label>
+                  <input type="email" class="form-control" id="lastName">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-lg-8">
+                  <label for="jobTitle">Job title</label>
+                  <input type="text" class="form-control" id="jobTitle">
+                </div>
+
+                <div class="form-group col-lg-4">
+                  <label for="salary">Salary</label>
+                  <input type="text" class="form-control" id="salary">
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            <div class="notes">
+              <b>Notes</b>
+              <p>
+                This is easily done with Bootstrap's grid. Add <code>row</code> class to standard form group and then wrap each pair of label and input in div with Bootstrap's <code>col-xx-x</code> column classes. This adjusts inputs width and also makes form responsive.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 left-border">
+          <pre>
+            <code>
+&lt;form&gt;
+  &lt;div class="form-group row"&gt;
+    &lt;div class="col-lg-6"&gt;
+      &lt;label for="firstName"&gt;First Name&lt;/label&gt;
+      &lt;input type="email" class="form-control" id="firstName"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-lg-6"&gt;
+      &lt;label for="lastName"&gt;Last Name&lt;/label&gt;
+      &lt;input type="email" class="form-control" id="lastName"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="row"&gt;
+    &lt;div class="form-group col-lg-8"&gt;
+      &lt;label for="jobTitle"&gt;Job title&lt;/label&gt;
+      &lt;input type="text" class="form-control" id="jobTitle"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-group col-lg-4"&gt;
+      &lt;label for="salary"&gt;Salary&lt;/label&gt;
+      &lt;input type="text" class="form-control" id="salary"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Inline labels and inputs</h1>
         </div>
 
         <div class="col-sm-6">
@@ -412,35 +515,27 @@
             </div>
 
             <div class="form-group row">
-              <label for="password5" class="col-xs-3 col-form-label">Password</label>
-              <div class="col-xs-9">
-                <input type="email" class="form-control" id="password5">
+              <label class="col-sm-3">Checkbox</label>
+              <div class="col-sm-9">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"> Check me out
+                  </label>
+                </div>
               </div>
             </div>
 
-            <div class="form-group">
-              <label class="form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 1
-              </label>
-              <label class="form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 2
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label class="form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option1"> 1
-              </label>
-              <label class="form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option2"> 2
-              </label>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </div>
             </div>
           </form>
 
           <div class="notes">
             <b>Notes</b>
             <p>
-              This uses Bootstrap's grid for sizing the labels and inputs. Notice the <code>form-group row</code> and <code>col-xs-x</code> classes
+              This again uses Boostrap's grid. Important is the <code>col-form-label</code> class on text field label which vertically centers the label. Also notice the <code>offset-sm-3</code> class used on button's wrapper div.
             </p>
           </div>
         </div>
@@ -457,87 +552,26 @@
   &lt;/div&gt;
 
   &lt;div class="form-group row"&gt;
-    &lt;label for="password5" class="col-xs-3 col-form-label"&gt;Password&lt;/label&gt;
-    &lt;div class="col-xs-9"&gt;
-      &lt;input type="email" class="form-control" id="password5"&gt;
+    &lt;label class="col-sm-3"&gt;Checkbox&lt;/label&gt;
+    &lt;div class="col-sm-9"&gt;
+      &lt;div class="form-check"&gt;
+        &lt;label class="form-check-label"&gt;
+          &lt;input class="form-check-input" type="checkbox"&gt; Check me out
+        &lt;/label&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;div class="form-group"&gt;
-    &lt;label class="form-check-inline"&gt;
-      &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"&gt; 1
-    &lt;/label&gt;
-    &lt;label class="form-check-inline"&gt;
-        &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"&gt; 2
-    &lt;/label&gt;
-  &lt;/div&gt;
-
-  &lt;div class="form-group"&gt;
-    &lt;label class="form-check-inline"&gt;
-      &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" value="option1"&gt; 1
-    &lt;/label&gt;
-    &lt;label class="form-check-inline"&gt;
-      &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" value="option2"&gt; 2
-    &lt;/label&gt;
+  &lt;div class="form-group row"&gt;
+    &lt;div class="offset-sm-3 col-sm-9"&gt;
+      &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;
             </code>
           </pre>
         </div>
       </div>
-
-      <!-- <div class="row"> -->
-      <!--   <div class="col&#45;sm&#45;12"> -->
-      <!--     <h1>Form grid layout</h1> -->
-      <!--   </div> -->
-      <!--  -->
-      <!--   <div class="col&#45;sm&#45;6"> -->
-      <!--     <div class="form&#45;container"> -->
-      <!--       <form> -->
-      <!--         <div class="form&#45;group"> -->
-      <!--           <label for="email3">Name</label> -->
-      <!--           <input type="text" class="form&#45;control" id="email3"> -->
-      <!--         </div> -->
-      <!--  -->
-      <!--         <div class="row"> -->
-      <!--           <div class="form&#45;group col&#45;xs&#45;8"> -->
-      <!--             <label for="email3" class="col&#45;form&#45;label">Job title</label> -->
-      <!--             <input type="text" class="form&#45;control" id="email3"> -->
-      <!--           </div> -->
-      <!--  -->
-      <!--           <div class="form&#45;group col&#45;xs&#45;4"> -->
-      <!--             <label for="email3" class="col&#45;form&#45;label">Salary</label> -->
-      <!--             <input type="text" class="form&#45;control" id="email3"> -->
-      <!--           </div> -->
-      <!--         </div> -->
-      <!--  -->
-      <!--         <div class="form&#45;group row"> -->
-      <!--           <div class="col&#45;xs&#45;6"> -->
-      <!--             <label for="email3" class="col&#45;form&#45;label">Email</label> -->
-      <!--             <input type="email" class="form&#45;control" id="email3"> -->
-      <!--           </div> -->
-      <!--  -->
-      <!--           <div class="col&#45;xs&#45;6"> -->
-      <!--             <label for="email3" class="col&#45;form&#45;label">Email</label> -->
-      <!--             <input type="email" class="form&#45;control" id="email3"> -->
-      <!--           </div> -->
-      <!--         </div> -->
-      <!--  -->
-      <!--         <button type="submit" class="btn btn&#45;primary">Submit</button> -->
-      <!--       </form> -->
-      <!--     </div> -->
-      <!--  -->
-      <!--     <p>This uses Bootstrap's grid for sizeing the labels and inputs. Notice the <code>form&#45;group row</code> and <code>col&#45;xs&#45;x</code> classes</p> -->
-      <!--   </div> -->
-      <!--  -->
-      <!--   <div class="col&#45;sm&#45;6 left&#45;border"> -->
-      <!--     <pre> -->
-      <!--       <code> -->
-      <!--  -->
-      <!--       </code> -->
-      <!--     </pre> -->
-      <!--   </div> -->
-      <!-- </div> -->
     </div>
   </body>
 </html>
